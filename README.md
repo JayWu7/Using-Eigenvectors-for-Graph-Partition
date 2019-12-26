@@ -10,14 +10,14 @@ These introduction will get you a copy of the project up and running on your loc
 
 Input graph G, number k
 
-     		1. Form graph adjacency matrix A
-     		2. Form diagonal matrix D
-     		3. Form normalized Laplacian matrix *L' = I -  $D^{-1/2}AD^{-1/2}$*
-     		4. Compute the first k eigenvectors $u_1,...,u_k$ of L'​
-     		5. Form matrix $U ∈ R^{n×k}$ with columns $u_1,...,u_k$
-     		6. Normalize $U$ so that rows have norm 1
-     		7. Consider the i-th row of $U$ as point $y_i ∈ R^k,i=1,...,n$ 
-     		8. Cluster the points {$y_i$}$i=1,...,n$ into clusters $C_1,...C_k$, using k-means clustering
+1. Form graph adjacency matrix A
+2. Form diagonal matrix D
+3. Form normalized Laplacian matrix *L' = I -  D<sup>-1/2</sup>AD<sup>-1/2</sup>*
+4. Compute the first k eigenvectors u<sub>1</sub>,...,u<sub>k</sub> of L'
+5. Form matrix U ∈ R<sup>n×k</sup> with columns u<sub>1</sub>,...,u<sub>k</sub>
+6. Normalize U so that rows have norm 1
+7. Consider the i-th row of U as point y<sub>i</sub> ∈ R<sup>k</sup>,i=1,...,n 
+8. Cluster the points {y<sub>i</sub>}i=1,...,n into clusters C<sub>1</sub>,...C<sub>k</sub>, using k-means clustering
 
 ### Prerequisites
 
