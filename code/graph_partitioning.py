@@ -15,7 +15,7 @@ def form_graph(filename):
             n, k
     '''
     a = time.time()
-    with open('./data/{}'.format(filename), 'r') as f:
+    with open('../data/{}'.format(filename), 'r') as f:
         first_line = f.readline()[:-1]  # remove '\n' at the end
         meta = first_line.split(' ')
         n, e, k = int(meta[2]), int(meta[3]), int(meta[-1])
@@ -162,7 +162,7 @@ def get_clusters(labels, k, filename, firstline):
     '''
     s = time.time()
     clusters = [set() for _ in range(k)]
-    with open('./result/{}_output.txt'.format(filename[:-4]), 'w') as f:
+    with open('../results/{}_output.txt'.format(filename[:-4]), 'w') as f:
         f.write('{}\n'.format(firstline))
         for i, l in enumerate(labels):
             clusters[l].add(i)
